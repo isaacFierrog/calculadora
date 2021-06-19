@@ -1,0 +1,96 @@
+/*Variables*/
+:root{
+    /*Backgrounds*/
+    --back-display-1: #191F32;
+    --back-main: #3B4664;
+    --back-keyboard: #252C44;
+    --back-key: #E8E3DD;
+    --back-key-erease: #647298;
+
+    /*Color fonts*/
+    --color-text-display: #e0dfe6;
+    --color-key: #615D61;
+    --color-key-erease: #C1CFD6;
+
+    /*Sizes*/
+    --size-key: 5.5rem;
+}
+
+/*General styles*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--back-main);
+}
+
+/*Main styles*/
+.main{
+    height: 100vh;
+    padding: 2rem;
+}
+
+/*Header styles*/
+.header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__title{
+    color: var(--color-text-display);
+}
+
+/*Display styles*/
+.display{
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--back-display-1);
+    border-radius: 1rem;
+}
+.display__data{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-text-display);
+}
+
+/*Keyboard styles*/
+.keyboard{
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    background-color: var(--back-keyboard);
+    border-radius: 1rem;
+}
+.keyboard__key{
+    width: var(--size-key);
+    height: var(--size-key);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-key);
+    background-color: var(--back-key);
+    border-radius: 1rem;
+}
+.keyboard__key--erease{
+    color: var(--color-key-erease);
+    background-color: var(--back-key-erease);
+}
