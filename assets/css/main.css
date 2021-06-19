@@ -80,7 +80,7 @@ body{
     border-radius: 1rem;
 }
 .keyboard__key{
-    width: var(--size-key);
+    width: 100%;
     height: var(--size-key);
     display: flex;
     justify-content: center;
