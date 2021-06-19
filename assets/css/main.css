@@ -73,6 +73,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "";
     gap: 1rem;
     justify-items: center;
     background-color: var(--back-keyboard);
@@ -93,4 +94,12 @@ body{
 .keyboard__key--erease{
     color: var(--color-key-erease);
     background-color: var(--back-key-erease);
+}
+.keyboard__key--rst{
+    width: 100%;
+    grid-column: 1 / 3;
+}
+.keyboard__key--equal{
+    width: 100%;
+    grid-column: 3 / 5;
 }
