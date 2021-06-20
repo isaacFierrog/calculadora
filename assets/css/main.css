@@ -1,11 +1,12 @@
 /*Variables*/
 :root{
     /*Backgrounds*/
-    --back-display-1: #191F32;
+    --back-display: #191F32;
     --back-main: #3B4664;
     --back-keyboard: #252C44;
     --back-key: #E8E3DD;
     --back-key-erease: #647298;
+    --back-ball: #CE3E31;
 
     /*Color fonts*/
     --color-text-display: #e0dfe6;
@@ -30,6 +31,9 @@ body{
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--back-main);
+}
+ul{
+    list-style: none;
 }
 
 /*Main styles*/
@@ -58,7 +62,7 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: var(--back-display-1);
+    background-color: var(--back-display);
     border-radius: 1rem;
 }
 .display__data{
@@ -90,6 +94,10 @@ body{
     color: var(--color-key);
     background-color: var(--back-key);
     border-radius: 1rem;
+    cursor: pointer;
+}
+.keyboard__key:hover{
+    opacity: 0.7;
 }
 .keyboard__key--erease{
     color: var(--color-key-erease);
@@ -102,4 +110,45 @@ body{
 .keyboard__key--equal{
     width: 100%;
     grid-column: 3 / 5;
+    color: var(--color-key-erease);
+    background-color: var(--back-ball);
+}
+
+/*Options styles*/
+.options, .list{
+    display: flex;
+    justify-content: space-between;
+}
+.options{
+    width: 12rem;
+}
+.options__title{
+    align-self: flex-end;
+}
+.options__title, .list{
+    color: var(--color-text-display);
+}
+.bar{
+    width: 5rem;
+    height: 2rem;
+    padding: .5rem;
+    display: flex; 
+    align-items: center;
+    background-color: var(--back-display);
+    border-radius: 1rem;
+}
+.bar__element{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--back-ball);
+}
+.bar--left{
+    justify-content: flex-start;
+}
+.bar--center{
+    justify-content: center;
+}
+.bar--right{
+    justify-content: flex-end;
 }
