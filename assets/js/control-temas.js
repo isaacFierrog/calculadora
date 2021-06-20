@@ -1,4 +1,5 @@
-const d = document;
+const d = document,
+    ls = localStorage;
 const temas = {
     "1": {
         backDisplay: "#191F32",
@@ -66,8 +67,16 @@ const controlTemas = (selecBarra) => {
             
             posiciones[("" + numeroTema)]($barra.classList[1])
             cambiarEstilos(temas[("" + numeroTema)]);
-
+            ls.setItem("tema", ("" + numeroTema));
         }
+    });
+
+    d.addEventListener("DOMContentLoaded", e => {
+        if(!ls.getItem("tema")) ls.setItem("tema", "1");
+        
+        numeroTema = parseInt(ls.getItem("tema"));
+        posiciones[ls.getItem("tema")]($barra.classList[1])
+        cambiarEstilos(temas[ls.getItem("tema")]);
     });
 }
 

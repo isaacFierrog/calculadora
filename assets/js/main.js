@@ -5,5 +5,5 @@ const d = document;
 
 d.addEventListener("DOMContentLoaded", e => {
     mostarDatos(".display__data", ".keyboard__key");
-    controlTemas(".bar");
 });
+controlTemas(".bar");
