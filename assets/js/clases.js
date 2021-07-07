@@ -1,11 +1,8 @@
 const d = document;
 
-class Calculadora(){
+export class Calculadora{
     constructor(selecDisplay){
         this.$display = d.querySelector(selecDisplay);
         this.$display.textContent = "HOLA";
     }
-
-
-
 }
